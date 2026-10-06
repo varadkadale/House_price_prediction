@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>House Price Prediction</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<div class="header">
+<h1>House Price Prediction</h1>
+<p>AI Based House Price Prediction System</p>
+</div>
+
+<div class="card">
+
+<h2>Enter Property Details</h2>
+
+<form id="predictionForm">
+
+<div class="form-group">
+<label>Area (Square Feet)</label>
+<input type="number" id="area" placeholder="Enter area" required>
+</div>
+
+<div class="form-group">
+<label>Bedrooms</label>
+<input type="number" id="bedrooms" min="1" max="10" placeholder="Enter bedrooms" required>
+</div>
+
+<div class="form-group">
+<label>Bathrooms</label>
+<input type="number" id="bathrooms" min="1" max="10" placeholder="Enter bathrooms" required>
+</div>
+
+<div class="form-group">
+<label>Number of Floors</label>
+<input type="number" id="stories" min="1" max="10" placeholder="Enter floors" required>
+</div>
+
+<div class="form-group">
+<label>Parking Spaces</label>
+<input type="number" id="parking" min="0" max="10" placeholder="Enter parking spaces" required>
+</div>
+
+<div class="form-group">
+<label>Property Age</label>
+<input type="number" id="age" min="0" max="100" placeholder="Enter property age" required>
+</div>
+
+<div class="form-group">
+<label>Location</label>
+<select id="location" required>
+<option value="">Select Location</option>
+<option value="Mumbai">Mumbai</option>
+<option value="Pune">Pune</option>
+<option value="Nashik">Nashik</option>
+<option value="Nagpur">Nagpur</option>
+<option value="Thane">Thane</option>
+</select>
+</div>
+
+<button type="submit">Predict House Price</button>
+
+</form>
+
+<div id="loading" class="loading">
+Predicting...
+</div>
+
+<div id="result" class="result">
+
+<h2>Predicted House Price</h2>
+
+<div class="price" id="price"></div>
+
+<h3>Input Summary</h3>
+
+<div id="summary"></div>
+
+</div>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
